@@ -134,10 +134,10 @@ export const FieldEditor = ({ fields, onFieldUpdate, onNext }: FieldEditorProps)
             <Input
               id={fieldId}
               name={field.name}
-              type="date"
+              type="text"
               value={field.value as string}
               onChange={(e) => updateFieldValue(index, e.target.value)}
-              placeholder={field.placeholder}
+              placeholder={field.placeholder || "MM/DD/YYYY or any date format"}
             />
           </div>
         );
@@ -151,10 +151,10 @@ export const FieldEditor = ({ fields, onFieldUpdate, onNext }: FieldEditorProps)
             <Input
               id={fieldId}
               name={field.name}
-              type="number"
+              type="text"
               value={field.value as string}
               onChange={(e) => updateFieldValue(index, e.target.value)}
-              placeholder={field.placeholder}
+              placeholder={field.placeholder || "Enter numbers, letters, or both"}
             />
           </div>
         );
